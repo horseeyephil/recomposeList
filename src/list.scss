@@ -1,0 +1,55 @@
+.list {
+  border: 1px solid red;
+  width: 400px;
+  padding: 18px;
+}
+
+.groceryItem {
+  border-bottom: 1px solid salmon;
+  position: relative;
+}
+
+.inputTool {
+  width: 100%;
+  display: flex;
+
+  &__input {
+    border: none;
+    border-bottom: 2px solid salmon;
+    box-shadow: none;
+    outline: none;
+    display: inline;
+    flex: 7;
+    font-size: 12px;
+  
+    &:focus{
+      outline: none;
+    }
+  }
+
+  &__addButton {
+    border: 2px solid teal;
+    cursor: pointer;
+    flex: 1;
+  
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.deleteButton {
+  opacity: 1;
+  transition: opacity 1s;
+  position: absolute;
+  right: 0;
+  color: teal;
+  padding: 2px;
+  cursor: pointer;
+
+  &--hidden {
+    opacity: 0;
+    transition: opacity .5s, visibility 1s;
+    visibility: hidden;
+  }
+}
